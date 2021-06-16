@@ -10,15 +10,18 @@
 body {
     font-family: 'Barlow Semi Condensed', sans-serif;
     background-color: var(--light-grayish-blue);
+    overflow: hidden;
 }
 
 .container {
-    /* width: 80vw;
+    width: 80vw;
     height: 80vh; 
     display: flex; 
     align-items: center;
     justify-content: center;
-    margin: auto; */
+    margin: auto;
+    padding: 5%;
+  
 }
 
 .main-content {
@@ -26,15 +29,14 @@ body {
     grid-template-areas: 
     'purple-content purple-content gray-content white-content' 
     'left-white-content black-content black-content white-content';
-    grid-gap: 2rem;
+    grid-gap: 1.5rem;
+   
 }
 
-.first-text {
-    font-weight: bold;
-}
 
 .person-details {
     display: flex;
+    margin-bottom: 20px;
 }
 
 .name-wrapper {
@@ -42,11 +44,23 @@ body {
 }
 
 .name {
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .position {
-    font-size: 11px;
+    font-size: 12px;
+    color: var(--light-gray);
+    opacity: 0.5;
+}
+
+#purple-content .position {
+    color: violet;
+
+}
+
+#purple-content .second-text {
+    color: violet;
+
 }
 
 .card {
@@ -55,14 +69,20 @@ body {
 
 .card-content {
     color: white;
-    padding: 30px;
+    padding: 25px;
 }
 
 .first-text {
-    font-size: 22px;
-    font-weight: bolder;
-}
+    font-size: 17px;
+    font-weight: bolder; 
+    margin-bottom: 20px;
+} 
 
+.second-text {
+    font-size: 12px;
+    line-height: 1.5;
+    opacity: 0.7;
+}
 .black-font {
     color: var(--very-dark-grayish-blue);
 }
@@ -80,16 +100,19 @@ body {
 #gray-content {
     grid-area: gray-content;
     background-color: var(--very-dark-grayish-blue);
+    width: 18vw;
 }
 
 #right-white-content {
     grid-area: white-content;
     background-color: var(--white);
+    width: 18vw;
 }
 
 #left-white-content {
     grid-area: left-white-content;
     background-color: var(--white);
+   width: 18vw;
 }
 
 #black-content {
